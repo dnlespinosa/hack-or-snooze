@@ -45,7 +45,8 @@ function updateNavOnLogin() {
 
 function submitBtn(evt){
   console.debug('submitBtn', evt);
-  console.log('HEY');
+  evt.preventDefault();
+  submitStory();
 }
 
 $submitBtn.on('click', submitBtn);

@@ -86,9 +86,12 @@ class StoryList {
     let theStory = {
       title: newStory.title, 
       author: user, 
-      url: newStory.url
+      url: newStory.url,
+      username: newStory.username
     }
-    return new Story(theStory)
+    
+    let newnewStory = new Story(theStory)
+    this.stories.push(newnewStory);
   }
 }
 

@@ -53,15 +53,20 @@ function putStoriesOnPage() {
 
 function submitStory() {
   console.debug('submitStory');
+  console.log('something');
   let title = document.getElementById('title').value;
   let url = document.getElementById('url').value;
   let author = document.getElementById('displayName').value;
+  let username = localStorage.getItem('username');
   let story = {
     title, 
     url, 
-    author
+    author, 
+    username, 
   };
-  let storyList = new StoryList();
-  let str = storyList.addStory(author, story);
+  console.log(story);
+  let str = storyList.addStory(username, story);
+  putStoriesOnPage();
+  $submitForm.hide();
   return str;
 }
